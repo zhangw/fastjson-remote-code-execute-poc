@@ -13,7 +13,8 @@ import java.io.IOException;
 
 public class Test extends AbstractTranslet {
     public Test() throws IOException {
-        Runtime.getRuntime().exec("calc");
+        Runtime.getRuntime().exec("say fastjson");
+        System.err.println("say fastjson");
     }
 
     @Override

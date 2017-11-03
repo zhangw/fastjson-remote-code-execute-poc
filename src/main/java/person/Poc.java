@@ -32,7 +32,8 @@ public class Poc {
     public static void  test_autoTypeDeny() throws Exception {
         ParserConfig config = new ParserConfig();
         final String fileSeparator = System.getProperty("file.separator");
-        final String evilClassPath = System.getProperty("user.dir") + "\\target\\classes\\person\\Test.class";
+        final String evilClassPath = System.getProperty("user.dir") +
+            String.join(fileSeparator, "/target", "classes", "person", "Test.class");
         String evilCode = readClass(evilClassPath);
         final String NASTY_CLASS = "com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl";
         String text1 = "{\"@type\":\"" + NASTY_CLASS +
